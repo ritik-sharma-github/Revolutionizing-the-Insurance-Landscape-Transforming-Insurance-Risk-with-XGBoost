@@ -62,6 +62,9 @@ test_data['Predicted_Response'] = test_predictions
 print(test_data[['id', 'Predicted_Response']])
 
 
+
+
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -130,4 +133,54 @@ test_accuracy = accuracy_score(true_responses, test_predictions)
 print("Test Set Accuracy:", test_accuracy)
 
 
+Validation Set Accuracy: 0.8315866598631445
+Classification Report on Validation Set:
+               precision    recall  f1-score   support
 
+           0       0.84      0.99      0.91     63789
+           1       0.38      0.03      0.05     12642
+
+    accuracy                           0.83     76431
+   macro avg       0.61      0.51      0.48     76431
+weighted avg       0.76      0.83      0.77     76431
+
+           id  Predicted_Response
+0       57782                   0
+1      286811                   0
+2      117823                   0
+3      213992                   0
+4      324756                   0
+...       ...                 ...
+78268     847                   0
+78269  417524                   0
+78270  188087                   0
+78271  215680                   0
+78272  138006                   0
+
+[78273 rows x 2 columns]
+Validation Set Accuracy: 0.8315866598631445
+Classification Report on Validation Set:
+               precision    recall  f1-score   support
+
+           0       0.84      0.99      0.91     63789
+           1       0.38      0.03      0.05     12642
+
+    accuracy                           0.83     76431
+   macro avg       0.61      0.51      0.48     76431
+weighted avg       0.76      0.83      0.77     76431
+
+id	Response
+0	57782	0
+1	286811	0
+2	117823	0
+3	213992	0
+4	324756	0
+...	...	...
+78268	847	0
+78269	417524	0
+78270	188087	0
+78271	215680	0
+78272	138006	0
+78273 rows × 2 columns
+
+Test Set Accuracy: 0.826351359983647
