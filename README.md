@@ -28,4 +28,4 @@ The conclusion summarizes the findings of the project, discusses the performance
 **Future Work:**
 This section discusses potential future directions for the project. This could include trying different machine learning algorithms, incorporating more features, or collecting more data.
 
-Remember, this is a general outline and the specifics will depend on your data and the exact steps you took in your analysis. If you have any specific questions about these steps, feel free to ask! I'm here to assist you.
+
