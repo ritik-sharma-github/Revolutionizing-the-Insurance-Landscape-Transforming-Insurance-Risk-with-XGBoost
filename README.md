@@ -20,10 +20,19 @@ The goal of this project is to leverage advanced machine learning techniques to 
 5. **Hyperparameter Tuning:**
    - **Grid Search:** Employed GridSearchCV to find the optimal hyperparameters for the XGBoost model. Evaluated different combinations of parameters to improve model performance.
    - **Best Parameters:** Found the best hyperparameters and retrained the model, achieving similar performance metrics (accuracy: 0.85, ROC AUC score: 0.90) but with potentially improved robustness.
+![download](https://github.com/user-attachments/assets/6e5622f8-ff5c-4713-82cb-5ede4969c384)
+![download](https://github.com/user-attachments/assets/8833a0fb-a9c2-4e29-9d9e-b4ec50db5ef2)
+
+![download](https://github.com/user-attachments/assets/528ec275-5538-417d-9838-dc18ee29d1eb)
+
+![download](https://github.com/user-attachments/assets/063eedd3-e9c8-41ec-bb92-cca44b70efdb)
+![download](https://github.com/user-attachments/assets/80ba6c31-c80c-494a-98c7-5826dc13eb95)
 
 6. **Model Persistence and Deployment:**
+7. ![download](https://github.com/user-attachments/assets/9d545f17-b765-4ea7-b166-da05e1a08cd8)
+
    - **Saving and Loading Model:** Saved the trained model to a file for future use and loaded it to make predictions on new data.
 
-7. **Prediction and Simulation:**
+8. **Prediction and Simulation:**
    - **User Input Predictions:** Created a function to collect user inputs, convert them into the required format, and predict insurance claim probabilities.
    - **Premium Simulation:** Simulated varying annual premium values to assess their impact on the model's predicted probabilities.
