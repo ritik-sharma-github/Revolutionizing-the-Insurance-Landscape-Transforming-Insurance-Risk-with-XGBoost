@@ -1,4 +1,3 @@
-Project Overview
 Objective: The goal of this project is to leverage advanced machine learning techniques to enhance the risk assessment process in the insurance industry. Specifically, we use an XGBoost classifier to predict the likelihood of a customer making an insurance claim based on various features, and optimize the model's performance through hyperparameter tuning.
 
 Key Steps and Techniques:
