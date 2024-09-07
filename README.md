@@ -1,38 +1,84 @@
 **Objective:**
-The goal of this project is to leverage advanced machine learning techniques to enhance the risk assessment process in the insurance industry. Specifically, we use an XGBoost classifier to predict the likelihood of a customer making an insurance claim based on various features, and optimize the model's performance through hyperparameter tuning.
+The goal of this project is to enhance the risk assessment process in the insurance industry by predicting the likelihood of a customer making an insurance claim. This is achieved by employing an XGBoost classifier to analyze various features and optimize the model's performance through hyperparameter tuning.
 
-**Key Steps and Techniques:**
+**Problem Statement:**
+Insurance companies need to accurately predict the probability of a customer making an insurance claim to manage risks and set appropriate premiums. Given various customer features such as age, driving history, and vehicle condition, the challenge is to build a predictive model that identifies high-risk customers who are more likely to file a claim.
 
-1. **Data Preparation:**
-   - **Feature Selection:** Identified and selected relevant features for the model, including 'Gender', 'Age', 'Region_Code', 'Previously_Insured', 'Vehicle_Age', 'Vehicle_Damage', 'Annual_Premium', 'Policy_Sales_Channel', and 'Vintage'.
-   - **One-Hot Encoding:** Transformed categorical variables into dummy variables to prepare the data for modeling. Handled any discrepancies in columns between training and test datasets by reindexing.
+### **Goal:**
+The primary goal of this project is to develop a robust predictive model using XGBoost that can accurately forecast the likelihood of insurance claims. This involves:
+- Exploring and understanding the data through exploratory data analysis (EDA).
+- Preprocessing the data to prepare it for modeling.
+- Applying the XGBoost algorithm to train and predict outcomes.
+- Evaluating the model's performance and optimizing it through hyperparameter tuning.
 
-2. **Model Training:**
-   - **XGBoost Classifier:** Utilized the XGBoost algorithm, known for its robustness and performance in classification tasks. Trained the model on the training dataset to learn patterns and make predictions.
+### **Modelling:**
+1. **Data Preprocessing:**
+   - **Handling Outliers:** Address any Outliers values in the dataset.
 
-3. **Performance Evaluation:**
-   - **Initial Metrics:** Assessed the model using accuracy, precision, recall, F1 score, and ROC AUC score. The initial results showed an accuracy of 0.85 and an ROC AUC score of 0.90, indicating a strong model performance.
-   - **Confusion Matrix Analysis:** Analyzed the confusion matrix to understand the distribution of predictions and misclassifications.
+![download](https://github.com/user-attachments/assets/8521b19f-91c2-4465-81ca-b58be6dcc495)
 
-4. **Feature Importance Analysis:**
-   - **Visualization:** Plotted the importance of features to identify which variables contributed most to the model's predictions. This helps in understanding the model's decision-making process and refining feature selection.
+   - **Feature Encoding:** Convert categorical variables into numerical values.
+   - **Feature Scaling:** Normalize or standardize numerical features if needed.
+   
+1. **Modeling Approach:**
+   - **Algorithm:** XGBoost (Extreme Gradient Boosting)
+   - **Training:** Fit the XGBoost model on the training data.
+   - **Hyperparameter Tuning:** Use techniques such as GridSearchCV or RandomizedSearchCV to find the optimal parameters for the model.
 
-5. **Hyperparameter Tuning:**
-   - **Grid Search:** Employed GridSearchCV to find the optimal hyperparameters for the XGBoost model. Evaluated different combinations of parameters to improve model performance.
-   - **Best Parameters:** Found the best hyperparameters and retrained the model, achieving similar performance metrics (accuracy: 0.85, ROC AUC score: 0.90) but with potentially improved robustness.
-![download](https://github.com/user-attachments/assets/6e5622f8-ff5c-4713-82cb-5ede4969c384)
-![download](https://github.com/user-attachments/assets/8833a0fb-a9c2-4e29-9d9e-b4ec50db5ef2)
+### **Exploratory Data Analysis (EDA):**
+- **Feature Analysis:** Examine the distribution and relationship of each feature with the target variable.
 
-![download](https://github.com/user-attachments/assets/528ec275-5538-417d-9838-dc18ee29d1eb)
+- ![download](https://github.com/user-attachments/assets/a7ceb460-ba54-4e4e-b8f9-6d041120f137)
 
-![download](https://github.com/user-attachments/assets/063eedd3-e9c8-41ec-bb92-cca44b70efdb)
-![download](https://github.com/user-attachments/assets/80ba6c31-c80c-494a-98c7-5826dc13eb95)
+- **Correlation Analysis:** Identify correlations between features to understand their impact on the target variable.
 
-6. **Model Persistence and Deployment:**
-7. ![download](https://github.com/user-attachments/assets/9d545f17-b765-4ea7-b166-da05e1a08cd8)
+![download](https://github.com/user-attachments/assets/a6f01eb8-748c-4c83-8cb6-576d114f9c4b)
+
+
+- **Visualization:** Use visualizations (e.g., histograms, scatter plots, heatmaps) to identify patterns and insights in the data.
+
+![download](https://github.com/user-attachments/assets/2629f842-15bc-4486-97f0-86971519dd71)
+![download](https://github.com/user-attachments/assets/c9a4ebaa-2f63-4c87-906b-c3783be0aa5d)
+![download](https://github.com/user-attachments/assets/7a2145e7-4f45-4d8b-ade3-080da7ddb556)
+
+
+### **Algorithm:**
+- **XGBoost Classifier:** A gradient boosting framework that is known for its efficiency and performance. It works by creating an ensemble of decision trees to improve predictive accuracy.
+
+### **Results:**
+- **Model Performance Metrics:** Evaluate the model using metrics such as accuracy, precision, recall, F1-score, and AUC-ROC.
+
+![download](https://github.com/user-attachments/assets/3c9ef791-3e6c-4b00-a1fd-f4939891000a)
+
+
+
+- **Confusion Matrix:** Analyze the confusion matrix to understand the classification results and identify any misclassifications.
+
+**Model Persistence and Deployment:**
 
    - **Saving and Loading Model:** Saved the trained model to a file for future use and loaded it to make predictions on new data.
 
-8. **Prediction and Simulation:**
+**Prediction and Simulation:**
    - **User Input Predictions:** Created a function to collect user inputs, convert them into the required format, and predict insurance claim probabilities.
+
+![Screenshot 2024-09-07 122542](https://github.com/user-attachments/assets/1ceb2d6b-ac0d-41db-ad25-637e586e391f)
+![Screenshot 2024-09-07 122602](https://github.com/user-attachments/assets/326b3bc6-507f-4992-8ac3-de80201b123d)
+
+   - 
    - **Premium Simulation:** Simulated varying annual premium values to assess their impact on the model's predicted probabilities.
+
+   - The model has predicted that there is a 96.02% probability that the customer will make a claim based on the provided features. Conversely, there is only a 3.98% probability that the customer will not make a claim.
+
+### **Platform:**
+- **Programming Language:** Python
+- **Libraries:** XGBoost, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn
+- **Development Environment:** Jupyter Notebook or Google Colab
+
+### **Example Record Analysis:**
+- **Record:** id: 167647, Gender: Male, Age: 22, Driving_License: 1, Region_Code: 7, Previously_Insured: 1, Vehicle_Age: < 1 Year, Vehicle_Damage: No, Annual_Premium: 2630, Policy_Sales_Channel: 152, Vintage: 16, Response: 0
+
+### **Summary**
+The project involves developing a predictive model using the XGBoost algorithm to classify insurance policy responses. By effectively preparing the data, training the model, and fine-tuning its hyperparameters, the project aims to achieve high prediction accuracy. The results include detailed performance metrics, insights into feature importance, and practical simulations to support business decisions.
+
+
+
